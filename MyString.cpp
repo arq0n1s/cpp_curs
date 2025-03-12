@@ -3,6 +3,30 @@
 
 // using namespace std;
 
+template<class T>
+
+class my_unique_ptr
+{
+public:
+    my_unique_ptr(T* p) throw() : px(p)
+    {
+    }
+
+    inline ~my_unique_ptr(void)
+    {
+        delete px;
+        px = nullptr;
+    }
+
+    inline T* operator->()
+    {
+        return px;
+    }
+
+private:
+    T* px; //!< Native pointer
+};
+
 class MyString {
 private:
     char *language;
@@ -81,24 +105,25 @@ public:
 int main (){
     
 
-    MyString SecondString;
-    std::cout << "second string ieyt" << std::endl;
-    SecondString.is_empty();
-
-    MyString ThreeString("Vitalii", "moldavian", true);
-    std::cout << "three string ieyt" << std::endl;
-    ThreeString.is_empty();
-    std::cout << "length of three string: " << ThreeString.length() << std::endl;
-
-    MyString newString = ThreeString;
-    std::cout << "the string from newString is: " << newString.c_str() << std::endl;
-
-    char newstr;
-    std::cout << "get ur new string: ";
-    std::cin >> newstr;
+    // MyString SecondString;
+    // std::cout << "second string ieyt" << std::endl;
+    // SecondString.is_empty();
+    // MyString ThreeString("Vitalii", "moldavian", true);
+    // std::cout << "three string ieyt" << std::endl;
+    // ThreeString.is_empty();
+    // std::cout << "length of three string: " << ThreeString.length() << std::endl;
+    // MyString newString = ThreeString;
+    // std::cout << "the string from newString is: " << newString.c_str() << std::endl;
+    // char newstr;
+    // std::cout << "get ur new string: ";
+    // std::cin >> newstr;
 
 
+    
+    my_unique_ptr<MyString> lopata_ptr = my_unique_ptr<MyString>(new MyString("lopata","moldavian",false));
 
 
+    std::cout << lopata_ptr->c_str() << "   length is: " << lopata_ptr->length() << std::endl;
+    
 
 }

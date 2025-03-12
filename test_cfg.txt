@@ -1,0 +1,42 @@
+[Cinematics.1]
+ShowIntro = "0"
+
+[environment.1]
+Current = "3481745600"
+
+[GPU.6]
+DisplayIndex = "1"
+DisplayManufacturerID = "11596"
+DisplayName = "LS27AG30x"
+DisplayProductID = "29050"
+DisplaySystemID = "14963355940454489717"
+GPUDeviceID = "8093"
+GPUIndex = "0"
+GPUName = "NVIDIA GeForce GTX 1650 with Max-Q Design"
+GPUScaler = "10.000000"
+GPUSystemID = "12336323498375083903"
+GPUVenderID = "4318"
+LastUsedGPUDeviceID = "8093"
+LastUsedGPUVendorID = "4318"
+
+[Render.13]
+FullScreenRefresh = "120"
+FullscreenWindow = "0"
+FullscreenWindowEnabled = "1"
+GFXPresetLevel = "1"
+PhysicsQuality = "2"
+ReflexMode = "2"
+ShowFPSCounter = "1"
+ShowGPUTemp = "1"
+ShowIND = "1"
+ShowRTT = "1"
+ShowSystemClock = "1"
+ShowVRAMUsage = "1"
+WindowedRefresh = "120"
+
+[Sound.3]
+MasterVolume = "40.000000"
+
+[TankMenuItems.1]
+FPSOverlay = "0"
+
